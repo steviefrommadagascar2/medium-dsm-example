@@ -3,6 +3,11 @@
 
 set -e
 
+# macOS: Disable ASLR for fixed address mmap
+if [[ "$(uname)" == "Darwin" ]]; then
+    export DYLD_NO_PIE=1
+fi
+
 echo "=== Starting DSM Test ==="
 
 # Cleanup
