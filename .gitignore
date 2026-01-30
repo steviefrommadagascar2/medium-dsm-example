@@ -1,0 +1,17 @@
+# Build artifacts
+*.o
+dsm
+
+# Temporary files
+/tmp/
+*.dat
+
+# Log files
+*.log
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
