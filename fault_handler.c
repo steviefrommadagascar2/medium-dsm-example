@@ -164,8 +164,8 @@ void *dsm_try_access(dsm_context_t *ctx, void *addr, uint32_t *out_page_num, int
  */
 int32_t dsm_read_int32(dsm_context_t *ctx, int32_t *addr)
 {
-    uint32_t page_num;
-    int for_write;
+    uint32_t page_num = 0;
+    int for_write = 0;
     
     /* Keep trying until we have the page */
     while (dsm_try_access(ctx, addr, &page_num, &for_write) == NULL) {
